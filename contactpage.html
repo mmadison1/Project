@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <style>
+        
+        h1{font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: black
+            ; font-size: x-large; text-align: center;}
+        h2{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+            ; color: black;font-size: medium;}
+        fieldset{border-color: lightgray;
+        font-family: Arial;
+        }
+        legend {color: black; font-weight: bold; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+        label {font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+        #navbar {
+        widows: 900px;
+        list-style-type: none;
+        margin: 10px;
+        padding: 0;
+        overflow: hidden;
+        background-color: lightpink;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      #navbar li {
+        display: block;
+        width: 150px;
+        float: left;
+        margin-left: 5px;
+        border: 1px solid white;
+        border-width: thin;
+      }
+      #navbar a {
+        display: block;
+        padding: 3px;
+        text-decoration: none;
+        background-color: lightpink;
+        color: white;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        text-align: center;
+      }
+      #navbar a:hover {
+        background-color: lightgrey;
+      }
+        img {float: left; height: 300px; width: 200px;}
+        
+    </style>
+</head>
+<body>
+  <nav>
+    <ul id="navbar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="barcelona">Barcelona</a></li>
+      <li><a href="#cities">Cities I Traveled To</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="sitemap.html">Sitemap</a></li>
+    </ul>
+  </nav>
+    <h1>Customer Feedback</h1>
+    <img src="images/Marissa Madison.jpg" alt="Marissa Madison">
+    <fieldset>
+      <legend>Your Information:</legend>
+      <form method="post" action="/process">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="Name" name="Name" maxlength="100"
+         placeholder="First Name" >
+        <br>
+        <form method="post" action="/process">
+        <label for="lastname">Last Name:</label>
+        <input type="text" name="Lastname" id="lastname" maxlength="100"
+        placeholder="Last Name">
+        </form>
+          <label for="Email">Email:</label>
+          <input type="text" id="Email" name="Email" maxlength="100" 
+          placeholder="Email">
+        </form>
+    </fieldset>
+    <fieldset> 
+        <legend>Questions</legend>
+      <textarea name="comment" id="comment" cols="50" rows="5" placeholder="Please provide questions here"></textarea>
+      <div>
+        <input type="Checkbox" name="Topics" id="CSS" value="CSS" checked > Sign me up for email updates
+      </div>
+    </div>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </fieldset>
+  <p><a href="sitemap.html"></a></p>
+
+    
+</body>
+</html>
