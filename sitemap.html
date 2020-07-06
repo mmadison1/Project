@@ -58,6 +58,9 @@
           sans-serif;
         text-align: center;
       }
+      #barc {border-width: 10px;
+      border-style: solid;
+      border-color: pink;}
     </style>
   </head>
   <body>
@@ -65,7 +68,7 @@
       <ul id="navbar">
         <li><a href="index.html">Home</a></li>
         <li><a href="barca-pv-3.html">Barcelona</a></li>
-        <li><a href="travel-pv-2.html">Cities I Traveled To</a></li>
+        <li><a href="travel-pv-2.html">Destinations</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="sitemap.html">Sitemap</a></li>
       </ul>
@@ -101,5 +104,34 @@
       have read the term project instructions and observed all the restrictions
       and limitations specified therein."
     </p>
+    <img id="barc" src="images/barcelona2.jpg" alt="barcelona2">
+    <script>
+      const slides = [
+        "images/barcelona2.jpg",
+        "images/barcelona.jpg",
+        "images/lisbon4.jpg",
+        "images/positano4.jpg",
+      ];
+
+      const colors = ["pink", "lightblue", "navy", "hotpink",]
+      let i = 0;
+
+      const image = document.querySelector("img");
+      function slideShow(){
+        if (i === slides.length){
+          i = 0;
+        }
+
+        image.src = slides[i];
+        image.style.borderColor = colors[i];
+
+        console.log(i);
+        i = i + 1;
+        setTimeout(slideShow, 1500)
+      }
+      document.getElementById("#barc").onload = slideShow;
+
+    
+    </script>
   </body>
 </html>
