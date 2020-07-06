@@ -61,8 +61,7 @@
       #barc {border-width: 10px;
       border-style: solid;
       border-color: pink;
-      height: 300;
-      width: 200;}
+      }
     </style>
   </head>
   <body>
@@ -94,7 +93,7 @@
       and limitations specified therein."
     </p>
     <div>
-    <img  src="images/barcelona2.jpg" alt="barcelona2">
+    <img id="barcImage" src="images/barcelona2.jpg" alt="barcelona2">
   </div>
     <script>
       const slides = [
@@ -110,19 +109,17 @@
       const image = document.querySelector("img");
       function slideShow(){
         console.log("running...");
+        let image = document.getElementById("barc");
         if (i === slides.length) {
           i = 0;
         }
 
-        image.src = slides[i];
+        barcImage.src = slides[i]; i++;
         image.style.borderColor = colors[i];
 
-        console.log(i);
-        i = i + 1;
         setTimeout(slideShow, 2000); //change image every 2 seconds
       }
-      document.querySelector("img").onload = slideShow;
-
+document.addEventListener("DOMContentLoaded, slideShow");
     
     </script>
   </body>
