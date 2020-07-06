@@ -58,9 +58,10 @@
           sans-serif;
         text-align: center;
       }
-      #barc {border-width: 10px;
-      border-style: solid;
-      border-color: pink;
+   #barc {
+        border-width: 10px;
+        border-style: solid;
+        border-color: pink;
       }
     </style>
   </head>
@@ -78,7 +79,7 @@
     <h1>Project Sitemap</h1>
 
     <br />
-    
+
     <h2>
       <li><a href="index.html">Index</a></li>
       <li><a href="navbar.html">Navigation </a></li>
@@ -93,8 +94,8 @@
       and limitations specified therein."
     </p>
     <div>
-    <img id="barcImage" src="images/barcelona2.jpg" alt="barcelona2">
-  </div>
+      <img id="barc" src="images/barcelona2.jpg" alt="barcelona2" />
+    </div>
     <script>
       const slides = [
         "images/barcelona2.jpg",
@@ -103,24 +104,24 @@
         "images/positano4.jpg",
       ];
 
-      const colors = ["pink", "lightblue", "navy", "hotpink",]
+      const colors = ["pink", "lightblue", "navy", "hotpink"];
       let i = 0;
 
-      const image = document.querySelector("img");
-      function slideShow(){
+      const image = document.getElementById("#barc");
+      function slideShow() {
         console.log("running...");
-        let image = document.getElementById("barc");
+        let image = document.getElementById("#barc");
         if (i === slides.length) {
           i = 0;
         }
 
-        barcImage.src = slides[i]; i++;
+        barcImage.src = slides[i];
+        i++;
         image.style.borderColor = colors[i];
 
         setTimeout(slideShow, 2000); //change image every 2 seconds
       }
-document.addEventListener("DOMContentLoaded", slideShow);
-    
+      document.addEventListener("DOMContentLoaded", slideShow);
     </script>
   </body>
 </html>
