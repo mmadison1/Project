@@ -110,12 +110,11 @@
       const image = document.getElementById("#barc");
       function slideShow() {
         console.log("running...");
-        let image = document.getElementById("#barc");
         if (i === slides.length) {
           i = 0;
         }
 
-        barcImage.src = slides[i];
+        image.src = slides[i];
         i++;
         image.style.borderColor = colors[i];
 
