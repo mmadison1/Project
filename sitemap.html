@@ -60,7 +60,9 @@
       }
       #barc {border-width: 10px;
       border-style: solid;
-      border-color: pink;}
+      border-color: pink;
+      height: 300;
+      width: 200;}
     </style>
   </head>
   <body>
@@ -77,20 +79,7 @@
     <h1>Project Sitemap</h1>
 
     <br />
-    <a href="https://www.instagram.com/marissa_madison/"
-      ><img
-        src="images/instagram.jpg"
-        alt="My Instagram"
-        width="60"
-        height="60"
-    /></a>
-    <a href="https://twitter.com/marissa_madison?lang=en"
-      ><img src="images/twitter.png" alt="My Twitter" width="60" height="60"
-    /></a>
-    <a href="https://vsco.co/marissamadison/gallery"
-      ><img src="images/vsco.jpg" alt="My VSCO" width="60" height="60"
-    /></a>
-    <br />
+    
     <h2>
       <li><a href="index.html">Index</a></li>
       <li><a href="navbar.html">Navigation </a></li>
@@ -104,7 +93,9 @@
       have read the term project instructions and observed all the restrictions
       and limitations specified therein."
     </p>
-    <img id="barc" src="images/barcelona2.jpg" alt="barcelona2">
+    <div>
+    <img  src="images/barcelona2.jpg" alt="barcelona2">
+  </div>
     <script>
       const slides = [
         "images/barcelona2.jpg",
@@ -118,7 +109,8 @@
 
       const image = document.querySelector("img");
       function slideShow(){
-        if (i === slides.length){
+        console.log("running...");
+        if (i === slides.length) {
           i = 0;
         }
 
@@ -127,9 +119,9 @@
 
         console.log(i);
         i = i + 1;
-        setTimeout(slideShow, 1500)
+        setTimeout(slideShow, 2000); //change image every 2 seconds
       }
-      document.getElementById("#barc").onload = slideShow;
+      document.querySelector("img").onload = slideShow;
 
     
     </script>
